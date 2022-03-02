@@ -118,25 +118,26 @@ time.sleep(3)
 cls()
 Reply = input("*Seven says 'What do you think, kid?': ")
 tc()
-if Reply in ["Yes" , "yes"]:
-    print("*Seven says 'Yes'")
-    tc()
-    print("*Mario Evaporates")
-    tc()
-    print("*Seven looks at you approvingly")
-    tc()
-    reply2 = input("*Seven says 'Do you want to play a game?': ")
-    tc()
-    if reply2 in ["no", "No"]:
-        print(Fore.RED + "*Seven is insulted and shatters your soul, you abruptly cease existing.")
+while True:
+    if Reply in ["Yes" , "yes"]:
+        print("*Seven says 'Yes'")
         tc()
-        print(Fore.GREEN + "System: You have reached a bad ending please try again.")
-        t()
-    elif reply2 in ["yes", "Yes"]:
-        print("Let's play a friendly game of rock, paper, scissors.")
-        rpsgame()
-else:
+        print("*Mario Evaporates")
+        tc()
+        print("*Seven looks at you approvingly")
+        tc()
+        reply2 = input("*Seven says 'Do you want to play a game?': ")
+        tc()
+        if reply2 in ["no", "No"]:
+            print(Fore.RED + "*Seven is insulted and shatters your soul, you abruptly cease existing.")
+            tc()
+            print(Fore.GREEN + "System: You have reached a bad ending please try again.")
+            t()
+        elif reply2 in ["yes", "Yes"]:
+            print("Let's play a friendly game of rock, paper, scissors.")
+            rpsgame()
+    else:
+        white()
+        print(Fore.GREEN + "System: Please answer with 'Yes' or 'No'.")
     white()
     print(Fore.GREEN + "System: This section is still under development.")
-white()
-print(Fore.GREEN + "System: This section is still under development.")
