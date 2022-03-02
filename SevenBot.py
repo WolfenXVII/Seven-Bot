@@ -1,3 +1,4 @@
+from ast import While
 import random
 import keyboard
 import time
@@ -18,6 +19,40 @@ def white():
 def tc():
     time.sleep(5)
     os.system('cls||clear')
+def Reboot():
+    cls()
+    print('Rebooting')
+    t5()
+    cls()
+    print('Rebooting.')
+    t5()
+    cls()
+    print('Rebooting..')
+    t5()
+    cls()
+    print('Rebooting...')
+    cls()
+def Glitch():
+    cls()
+    print("I'5l t$a6h yo# som8 >an*ers.")
+    t5()
+    cls()
+    print("@'l^ 4e&c8 ?0u s!$e m*9ne666.")
+    t5()
+    cls()
+    print("I'=l t!a\h !o~ s#m$ %^n>e7s.")
+    t5()
+    cls()
+    print("0`ll $#9ch y!u #o5e ?|n+3rs.")
+    t5()
+    cls()
+    print(Fore.RED + "Ar3 YOu sURE Y0U'rE Al0N3?" + Fore.WHITE)
+    time.sleep(.1)
+    cls()
+    print("I'll teach you some manners.")
+    t5()
+    cls()
+
 def rpsgame():
     tc()
     rps = ["Rock", "Paper", "Scissors"]
@@ -118,26 +153,47 @@ time.sleep(3)
 cls()
 Reply = input("*Seven says 'What do you think, kid?': ")
 tc()
-while True:
-    if Reply in ["Yes" , "yes"]:
-        print("*Seven says 'Yes'")
+def insult():
+    #Swear keywords dont work, only works if you type the exact phrase instead of the keywords
+    if Reply in ["Fuck you" , "fuck you" , "Bitch" , "bitch" , "whore" , "Whore" , "Cunt" , "cunt" , "Asshole" , "asshole" , "Slut" , "slut" , "Piece of shit" , "piece of shit" , "Stupid" , "stupid" , "Idiot" , "idiot" , "Motherfucker" , "motherfucker" , "Fucker" , "fucker" ]:
+        print(Fore.WHITE + "*Seven says 'Well... that wasn't very polite..." + Glitch()) #the part before Glitch doesn't show, also crash
         tc()
-        print("*Mario Evaporates")
+        print(Fore.RED + "*Seven devours your soul")
         tc()
-        print("*Seven looks at you approvingly")
+        print(Fore.GREEN + "System: You have reached a bad ending please try again.")
+        t()
+        os.close
+    else:
+        print(Fore.GREEN + "something broke, fix it")
+insult()
+if Reply in ["Yes" , "yes"]:
+    print("*Seven says 'Yes'")
+    tc()
+    print("*Mario Evaporates")
+    tc()
+    print("*Seven looks at you approvingly")
+    tc()
+    while True:
+        Reply = input(Fore.WHITE + "*Seven says 'Do you want to play a game?': ")
         tc()
-        reply2 = input("*Seven says 'Do you want to play a game?': ")
-        tc()
-        if reply2 in ["no", "No"]:
+        insult()
+        if Reply in ["no", "No"]:
             print(Fore.RED + "*Seven is insulted and shatters your soul, you abruptly cease existing.")
             tc()
             print(Fore.GREEN + "System: You have reached a bad ending please try again.")
             t()
-        elif reply2 in ["yes", "Yes"]:
+            os.close()
+        elif Reply in ["yes", "Yes"]:
             print("Let's play a friendly game of rock, paper, scissors.")
             rpsgame()
-    else:
-        white()
-        print(Fore.GREEN + "System: Please answer with 'Yes' or 'No'.")
+            tc()
+            print(Fore.GREEN + "System: This section is still under development.")
+        else:
+            print(Fore.GREEN + "System: ERROR; please reply with 'Yes' or 'No'.")
+            t()
+            Reboot()
+else:
     white()
     print(Fore.GREEN + "System: This section is still under development.")
+white()
+print(Fore.GREEN + "System: This section is still under development.")
